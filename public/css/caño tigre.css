@@ -1,0 +1,488 @@
+:root {
+    --color-primary: #2ecc71;
+    --color-secondary: #27ae60;
+    --color-background: #e8f5e9;
+    --color-text: #2c3e50;
+    --color-accent: #3498db;
+}
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+header {
+    background-color: #27ae60;
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin: 0;
+    padding: 0;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+header nav ul li a:hover {
+    color:#68747c
+}
+
+.impacto {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('/api/placeholder/1200/600');
+    background-size: cover;
+    padding: 100px 20px;
+    color: white;
+    text-align: center;
+}
+
+.impacto h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.detalles {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    padding: 50px 20px;
+    background-color: #fff;
+}
+
+.detalle-item {
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.detalle-item:hover {
+    transform: translateY(-5px);
+}
+
+.detalle-item h2 {
+    color: #005c3e;
+    margin-bottom: 15px;
+}
+
+.estadisticas {
+    background-color: #f8f9fa;
+    padding: 50px 20px;
+}
+
+.estadisticas-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.estadistica-item {
+    text-align: center;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.estadistica-numero {
+    font-size: 2.5em;
+    color: #27ae60;
+    font-weight: bold;
+}
+
+.timeline {
+    max-width: 1000px;
+    margin: 50px auto;
+    padding: 20px;
+}
+
+.timeline-item {
+    border-left: 3px solid #27ae60;
+    padding: 20px;
+    margin: 20px 0;
+    position: relative;
+}
+
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    left: -10px;
+    top: 50%;
+    width: 15px;
+    height: 15px;
+    background: #27ae60;
+    border-radius: 50%;
+}
+
+.galeria {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #f0f0f0;
+}
+
+.galeria-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.galeria-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: white;
+}
+
+.galeria-item img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.galeria-item:hover img {
+    transform: scale(1.1);
+}
+
+.galeria-descripcion {
+    padding: 10px;
+    margin: 0;
+    background-color: white;
+    color: #333;
+    font-size: 0.9em;
+    text-align: center;
+}
+
+.llamado-accion {
+    background-color: #27ae60;
+    color: white;
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.btn {
+    display: inline-block;
+    background-color:#48bb78;
+    color: white;
+    padding: 15px 30px;
+    font-size: 1.2em;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #68747c;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.social {
+    margin-top: 1rem;
+}
+
+.social a {
+    color: white;
+    font-size: 24px;
+    margin: 0 15px;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.social a:hover {
+    color: #68747c;
+}
+/* Nuevas secciones */
+.especies-amenazadas {
+    padding: 2rem;
+}
+
+.especies-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.especie-card {
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.especie-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.especie-info {
+    padding: 1rem;
+}
+@media (max-width: 768px) {
+    .detalles {
+        grid-template-columns: 1fr;
+    }
+
+    .galeria-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .impacto h1 {
+        font-size: 2em;
+    }
+}
+
+
+.galeria {
+    padding: 4rem 2rem;
+    text-align: center;
+    background-color: #f7fafc;
+}
+
+.galeria h2 {
+    color: #005c3e;
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    position: relative;
+    display: inline-block;
+}
+
+.galeria h2:after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60%;
+    height: 3px;
+    background-color: #27ae60;
+    border-radius: 2px;
+}
+
+.imagenes {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+    max-width: 1400px;
+    margin: 3rem auto;
+    padding: 0 1rem;
+}
+
+.imagen-card {
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background-color: white;
+}
+
+.imagen-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
+
+.imagen-card img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.imagen-card:hover img {
+    transform: scale(1.05);
+}
+
+.imagen-info {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(transparent, rgba(0,0,0,0.8));
+    color: white;
+    padding: 1.5rem;
+    transform: translateY(100%);
+    transition: transform 0.3s ease;
+}
+
+.imagen-card:hover .imagen-info {
+    transform: translateY(0);
+}
+
+.imagen-info h3 {
+    margin: 0 0 0.5rem;
+    font-size: 1.2rem;
+}
+
+.imagen-info p {
+    margin: 0;
+    font-size: 0.9rem;
+    opacity: 0.9;
+}
+
+.galeria-descripcion {
+    max-width: 800px;
+    margin: 0 auto 3rem;
+    color: #4a5568;
+    line-height: 1.8;
+}
+        /* Estilos para el enlace que contiene la flecha */
+        .back-arrow {
+            display: inline-flex; 
+            align-items: center; 
+            justify-content: center; 
+            text-decoration: none; 
+            color: #27ae60; 
+            font-size: 20px; /* Tamaño del icono */
+            width: 50px; 
+            height: 50px;
+            border-radius: 50%; /* Hace un botón redondo */
+            background-color: #f4f4f4; /* Fondo claro */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para destacar */
+            transition: all 0.3s ease; 
+            margin: 5px;
+        }
+        
+        /* Estilos cuando se pasa el cursor sobre la flecha */
+        .back-arrow:hover {
+            background-color: #3498DB; 
+            color: #fff; 
+            transform: scale(1.1);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); 
+        }
+        
+        /* Asegura que el icono esté correctamente alineado */
+        .back-arrow i {
+            transition: transform 0.3s ease; /* Suaviza las animaciones */
+        }
+        /* Sidebar Menu Styles */
+.sidebar-toggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1100; /* Sin cambios */
+    background-color: var(--color-accent);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s;
+}
+
+.sidebar-toggle:hover {
+    background-color: var(--color-primary);
+}
+
+.profile-sidebar {
+    position: fixed;
+    top: 0;
+    right: 0; /* Cambiado para alinear la barra al lado derecho */
+    width: 300px;
+    height: 100vh; /* Cambiado de 100% a 100vh para consistencia en todas las pantallas */
+    background-color: white;
+    box-shadow: -4px 0 10px rgba(0,0,0,0.1);
+    z-index: 1000;
+    transform: translateX(100%); /* Oculta la barra inicialmente */
+    transition: transform 0.3s ease-in-out;
+    padding: 30px; /* Conservado para estilo */
+    overflow-y: auto; /* Mantiene el scroll */
+}
+
+.profile-sidebar.active {
+    transform: translateX(0); /* Ajuste para mostrar la barra */
+}
+
+.profile-sidebar-close {
+    position: absolute;
+    top: 10px; /* Ajustado de 15px a 10px */
+    right: 10px; /* Ajustado de 15px a 10px */
+    background: none;
+    border: none;
+    font-size: 20px; /* Ajustado de 24px a 20px */
+    cursor: pointer;
+    color: var(--color-text); /* Conservado */
+}
+
+.profile-sidebar h3 {
+    color: var(--color-secondary);
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.profile-sidebar .btn {
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 12px;
+    background-color: var(--color-accent);
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    text-align: center;
+    transition: background-color 0.3s;
+}
+
+.profile-sidebar .btn:hover {
+    background-color: var(--color-primary);
+}
+
+.profile-sidebar ul {
+    list-style-type: none;
+    margin-top: 20px;
+}
+
+.profile-sidebar ul li {
+    margin-bottom: 10px;
+}
+
+.profile-sidebar ul li a {
+    color: var(--color-text);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.profile-sidebar ul li a:hover {
+    color: var(--color-accent);
+}
+
+/* Ajustes para dispositivos móviles */
+@media (max-width: 768px) {
+    .profile-sidebar {
+        width: 80%; /* Reduce el ancho en pantallas pequeñas */
+    }
+}

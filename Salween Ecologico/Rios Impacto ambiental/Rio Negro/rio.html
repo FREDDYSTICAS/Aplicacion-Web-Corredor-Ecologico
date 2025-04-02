@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Impacto Ambiental - Río Negro</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #27ae60;
+            --secondary-color: #27ae60;
+            --background-color: #f7fafc;
+            --text-color: #2d3748;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: var(--primary-color);
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        nav ul li {
+            margin: 0 1.5rem;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .impacto {
+            background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('/api/placeholder/1200/400');
+            background-size: cover;
+            color: white;
+            padding: 4rem 2rem;
+            text-align: center;
+        }
+
+        .impacto-contenido {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .detalles {
+            padding: 4rem 2rem;
+            background-color: var(--background-color);
+        }
+
+        .detalle-item {
+            max-width: 800px;
+            margin: 2rem auto;
+            padding: 2rem;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .datos-clave {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 2rem;
+        }
+
+        .dato-item {
+            text-align: center;
+            padding: 2rem;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .dato-item i {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        .ecosistema {
+            padding: 4rem 2rem;
+            background-color: white;
+        }
+
+        .especies-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 2rem auto;
+        }
+
+        .especie-card {
+            padding: 1.5rem;
+            background: var(--background-color);
+            border-radius: 8px;
+        }
+
+        .llamado-accion {
+            background-color: var(--primary-color);
+            color: white;
+            text-align: center;
+            padding: 4rem 2rem;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 1rem 2rem;
+            background-color: var(--secondary-color);
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            margin-top: 1rem;
+            transition: background-color 0.3s;
+        }
+
+        .btn:hover {
+            background-color: #38a169;
+        }
+
+        footer {
+            background-color: #2d3748;
+            color: white;
+            padding: 2rem;
+            text-align: center;
+        }
+
+        .social {
+            margin-top: 1rem;
+        }
+
+        .social a {
+            color: white;
+            margin: 0 0.5rem;
+            font-size: 1.5rem;
+        }
+
+        .galeria {
+            padding: 4rem 2rem;
+            text-align: center;
+        }
+
+        .imagenes {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 2rem auto;
+        }
+
+        .imagenes img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="/">Inicio</a></li>
+                <li><a href="/impacto-ambiental">Impacto Ambiental</a></li>
+                <li><a href="/Salween Ecologico/Registro Usuario/Usuario.html">Registro</a></li>
+                <li><a href="/contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="impacto">
+        <div class="impacto-contenido">
+            <h1>Impacto Ambiental en Río Negro</h1>
+            <p>Río Negro, una arteria vital de Villavicencio, enfrenta desafíos críticos que amenazan su ecosistema y la biodiversidad que sustenta. Descubre la situación actual, los esfuerzos de conservación y cómo puedes contribuir a su preservación.</p>
+        </div>
+    </section>
+
+    <section class="datos-clave">
+        <div class="dato-item">
+            <i class="fas fa-water"></i>
+            <h3>Calidad del Agua</h3>
+            <p>El índice de calidad del agua ha disminuido un 45% en los últimos 5 años debido a la contaminación industrial y doméstica.</p>
+        </div>
+        <div class="dato-item">
+            <i class="fas fa-tree"></i>
+            <h3>Cobertura Forestal</h3>
+            <p>Se ha perdido el 30% de la cobertura boscosa en las riberas del río durante la última década.</p>
+        </div>
+        <div class="dato-item">
+            <i class="fas fa-fish"></i>
+            <h3>Biodiversidad</h3>
+            <p>Más de 50 especies de peces nativos están en riesgo debido a la degradación del hábitat acuático.</p>
+        </div>
+    </section>
+
+    <section class="detalles">
+        <div class="detalle-item">
+            <h2>Contaminación y Sus Efectos</h2>
+            <p>La contaminación del Río Negro proviene de múltiples fuentes:</p>
+            <ul>
+                <li>Vertimientos industriales no controlados</li>
+                <li>Residuos agrícolas y pesticidas</li>
+                <li>Desechos domésticos de asentamientos ribereños</li>
+                <li>Sedimentación por erosión</li>
+            </ul>
+            <p>Estos factores han llevado a una disminución significativa en la calidad del agua y la biodiversidad acuática.</p>
+        </div>
+        
+        <div class="detalle-item">
+            <h2>Proyectos de Restauración</h2>
+            <p>Actualmente se están desarrollando varios proyectos de restauración:</p>
+            <ul>
+                <li>Programa de reforestación de riberas</li>
+                <li>Instalación de sistemas de tratamiento de aguas</li>
+                <li>Monitoreo continuo de la calidad del agua</li>
+                <li>Educación ambiental en comunidades locales</li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="ecosistema">
+        <h2 style="text-align: center;">Ecosistema del Río Negro</h2>
+        <div class="especies-list">
+            <div class="especie-card">
+                <h3>Flora Nativa</h3>
+                <ul>
+                    <li>Sauce llorón</li>
+                    <li>Guadua angustifolia</li>
+                    <li>Heliconias</li>
+                    <li>Orquídeas endémicas</li>
+                </ul>
+            </div>
+            <div class="especie-card">
+                <h3>Fauna Acuática</h3>
+                <ul>
+                    <li>Bagre rayado</li>
+                    <li>Bocachico</li>
+                    <li>Sardinas nativas</li>
+                    <li>Cangrejos de río</li>
+                </ul>
+            </div>
+            <div class="especie-card">
+                <h3>Aves Ribereñas</h3>
+                <ul>
+                    <li>Martín pescador</li>
+                    <li>Garza blanca</li>
+                    <li>Pato real</li>
+                    <li>Correlimos</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section class="galeria">
+        <h2>Galería de Río Negro</h2>
+        <div class="imagenes">
+            <img src="/api/placeholder/400/300" alt="Vista panorámica del Río Negro">
+            <img src="/api/placeholder/400/300" alt="Actividades de conservación">
+            <img src="/api/placeholder/400/300" alt="Fauna local del río">
+        </div>
+    </section>
+
+    <section class="llamado-accion">
+        <h3>¡Únete a la Conservación del Río Negro!</h3>
+        <p>Tu participación es crucial para la preservación de este importante ecosistema. Puedes contribuir de diferentes maneras:</p>
+        <ul style="list-style: none; padding: 0;">
+            <li>✔️ Participar en jornadas de limpieza</li>
+            <li>✔️ Apoyar proyectos de reforestación</li>
+            <li>✔️ Educar a otros sobre la importancia del río</li>
+            <li>✔️ Reportar actividades que dañen el ecosistema</li>
+        </ul>
+        <a href="/registro" class="btn">Únete Ahora</a>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Salween Ecológico. Todos los derechos reservados.</p>
+        <div class="social">
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+        </div>
+    </footer>
+</body>
+</html>

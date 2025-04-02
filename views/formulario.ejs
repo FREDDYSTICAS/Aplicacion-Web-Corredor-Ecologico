@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario Salween Ecológico</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <link rel="stylesheet" href="/css/formulario.css"> 
+</head>
+<body>
+    <nav>
+        <!-- estructura de la flecha de inicio-->
+        <a href="/inicio.html" class="back-arrow">
+            <i class="fas fa-arrow-left"></i>
+        </a>
+    </nav>
+    <div class="container">
+        <h1>Formulario de Registro</h1>
+        <!-- Formulario para Ríos -->
+        <form action="/registroRio" method="POST">
+            <h2>Registro de Ríos</h2>
+            <label for="nombre_rio">Nombre del Río:</label>
+            <input type="text" id="nombre_rio" name="nombre_rio" required>
+
+            <label for="descripcion_rio">Descripción:</label>
+            <textarea id="descripcion_rio" name="descripcion_rio" required></textarea>
+
+            <label for="longitud_rio">Longitud (km):</label>
+            <input type="number" id="longitud_rio" name="longitud_rio" step="0.01" required>
+
+            <label for="estado_rio">Estado:</label>
+            <input type="text" id="estado_rio" name="estado_rio" required>
+
+            <label for="biodiversidad_rio">Biodiversidad:</label>
+            <input type="text" id="biodiversidad_rio" name="biodiversidad_rio" required>
+
+            <label for="imagen_url_rio">URL de la Imagen:</label>
+            <input type="url" id="imagen_url_rio" name="imagen_url_rio">
+
+            <button type="submit">Registrar Río</button>
+        </form>
+
+        <!-- Formulario para Proyectos -->
+        <form action="/registroProyecto" method="POST">
+            <h2>Registro de Proyectos</h2>
+            <label for="nombre_proyecto">Nombre del Proyecto:</label>
+            <input type="text" id="nombre_proyecto" name="nombre_proyecto" required>
+
+            <label for="descripcion_proyecto">Descripción:</label>
+            <textarea id="descripcion_proyecto" name="descripcion_proyecto" required></textarea>
+
+            <label for="fecha_inicio">Fecha de Inicio:</label>
+            <input type="date" id="fecha_inicio" name="fecha_inicio" required>
+
+            <label for="fecha_fin">Fecha de Fin:</label>
+            <input type="date" id="fecha_fin" name="fecha_fin">
+
+            <label for="estado_proyecto">Estado:</label>
+            <input type="text" id="estado_proyecto" name="estado_proyecto" required>
+
+            <label for="imagen_url_proyecto">URL de la Imagen:</label>
+            <input type="url" id="imagen_url_proyecto" name="imagen_url_proyecto">
+
+            <button type="submit">Registrar Proyecto</button>
+        </form>
+
+        <!-- Formulario para Contacto -->
+        <form action="/registroContacto" method="POST">
+            <h2>Información de Contacto</h2>
+            <label for="direccion">Dirección:</label>
+            <input type="text" id="direccion" name="direccion" required>
+
+            <label for="telefono">Teléfono:</label>
+            <input type="text" id="telefono" name="telefono" required>
+
+            <label for="movil">Móvil:</label>
+            <input type="text" id="movil" name="movil" required>
+
+            <label for="email">Correo Electrónico:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="web">Sitio Web:</label>
+            <input type="url" id="web" name="web">
+
+            <button type="submit">Actualizar Información de Contacto</button>
+        </form>
+    </div>
+
+    <script src="scripts.js"></script> 
+</body>
+</html>

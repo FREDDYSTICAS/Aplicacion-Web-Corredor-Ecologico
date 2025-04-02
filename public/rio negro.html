@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Impacto Ambiental - Río Negro</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="css/rio negro.css" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <nav>
+        <a href="/inicio.html" class="back-arrow">
+            <i class="fas fa-arrow-left"></i>
+        </a>
+            <ul>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#registro">Registro</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- menu desplegable-->
+    <button class="sidebar-toggle" onclick="toggleSidebar()">
+        <i class="fas fa-user"></i>
+    </button>
+
+    <!-- Profile Sidebar -->
+    <div class="profile-sidebar" id="profileSidebar">
+        <button class="profile-sidebar-close" onclick="toggleSidebar()">
+        </button>
+        <h3>Área Personal</h3>
+        <a href="/login" class="btn">Iniciar Sesión</a>
+        <a href="/formulario" class="btn">Registrarse Voluntario</a>
+        <a href="#" class="btn">Mi Perfil</a>
+        <hr>
+        <h4>Accesos Rápidos</h4>
+        <ul>
+                <li><a href="/caño tigre.html">Pagina caño tigre</a></li>
+                <li><a href="/rio ocoa.html">Pagina rìo Ocoa</a></li>
+                <li><a href="/inicio.html#output1">Inteligencia artificial</a></li>
+                <li><a href="/inicio.html">Pagina de Inicio</a></li>
+            
+        </ul>
+    </div>
+
+    <section class="impacto" id="inicio" style="background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('img/Rio negro.jpg'); background-size: cover; background-position: center;">
+        <div class="impacto-contenido">
+            <h1>Impacto Ambiental en Río Negro</h1>
+            <p>Río Negro, una arteria vital de Villavicencio, enfrenta desafíos críticos que amenazan su ecosistema y la biodiversidad que sustenta. Descubre la situación actual, los esfuerzos de conservación y cómo puedes contribuir a su preservación.</p>
+        </div>
+    </section>
+    
+    <section class="estadisticas">
+        <h2 style="text-align: center; color: #005c3e; margin-bottom: 40px;">Cifras Alarmantes</h2>
+        <div class="dato-item">
+            <i class="fas fa-water"></i>
+            <h3>Calidad del Agua</h3>
+            <p>El índice de calidad del agua ha disminuido un 45% en los últimos 5 años debido a la contaminación industrial y doméstica.</p>
+        </div>
+        <div class="dato-item">
+            <i class="fas fa-tree"></i>
+            <h3>Cobertura Forestal</h3>
+            <p>Se ha perdido el 30% de la cobertura boscosa en las riberas del río durante la última década.</p>
+        </div>
+        <div class="dato-item">
+            <i class="fas fa-fish"></i>
+            <h3>Biodiversidad</h3>
+            <p>Más de 50 especies de peces nativos están en riesgo debido a la degradación del hábitat acuático.</p>
+        </div>
+    </section>
+
+    <section class="detalles">
+        <div class="detalle-item">
+            <h2>Contaminación y Sus Efectos</h2>
+            <p>La contaminación del Río Negro proviene de múltiples fuentes:</p>
+            <ul>
+                <li>Vertimientos industriales no controlados</li>
+                <li>Residuos agrícolas y pesticidas</li>
+                <li>Desechos domésticos de asentamientos ribereños</li>
+                <li>Sedimentación por erosión</li>
+            </ul>
+        </div>
+        
+        <div class="detalle-item">
+            <h2>Proyectos de Restauración</h2>
+            <p>Actualmente se están desarrollando varios proyectos de restauración:</p>
+            <ul>
+                <li>Programa de reforestación de riberas</li>
+                <li>Instalación de sistemas de tratamiento de aguas</li>
+                <li>Monitoreo continuo de la calidad del agua</li>
+                <li>Educación ambiental en comunidades locales</li>
+            </ul>
+        </div>
+    </section>
+
+<!-- Nueva sección de especies amenazadas -->
+<section class="especies-amenazadas">
+    <h2>Especies Amenazadas del Río Negro</h2>
+    <div class="especies-grid">
+        <!-- Monito nocturno -->
+        <div class="especie-card">
+            <img src="img/monito nocturno.jpg" alt="Monito Nocturno">
+            <div class="especie-info">
+                <h3>Monito Nocturno</h3>
+                <p>Este pequeño primate está en peligro debido a la deforestación y la fragmentación de su hábitat, limitando su capacidad para sobrevivir.</p>
+            </div>
+        </div>
+        <!-- Tucán de Pico Grande -->
+        <div class="especie-card">
+            <img src="img/Toucan.jpg" alt="Tucán de Pico Grande">
+            <div class="especie-info">
+                <h3>Tucán de Pico Grande</h3>
+                <p>El tucán de pico grande es una especie amenazada por la pérdida de su hábitat natural debido a la tala de bosques y la expansión agrícola.</p>
+            </div>
+        </div>
+        <!-- Guacamaya Roja -->
+        <div class="especie-card">
+            <img src="img/guacamaya.jpg" alt="Guacamaya Roja">
+            <div class="especie-info">
+                <h3>Guacamaya Roja</h3>
+                <p>Conocida por su brillante plumaje, esta especie está en peligro debido a la captura ilegal y la destrucción de los bosques donde habita.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+    <section class="galeria">
+        <h2>Galería de Río Negro</h2>
+        <div class="galeria-descripcion">
+           
+        </div>
+        <div class="imagenes">
+            <div class="imagen-card">
+                <img src="img/rio negro.jpg" alt="Río Negro " />
+                <div class="imagen-info">
+                    <h3>Río Negro </h3>
+                   
+                </div>
+            </div>
+            <div class="imagen-card">
+                <img src="img/image_content_10216453_20181017220843.webp" alt="Contaminación en el Río Negro" />
+                <div class="imagen-info">
+                    <h3>Contaminación en el Río Negro</h3>
+                    
+                </div>
+            </div>
+            <div class="imagen-card">
+                <img src="img/c19ccaf4-515b-411f-9c77-806940fee5ae.jpg" alt="Conservación en el Rio Negro" />
+                <div class="imagen-info">
+                    <h3>Conservación en el Rio Negro</h3>
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="llamado-accion" id="registro">
+        <h3>¡Únete a la Conservación del Río Negro!</h3>
+        <p>Tu participación es crucial para la preservación de este importante ecosistema. Puedes contribuir de diferentes maneras:</p>
+        <ul style="list-style: none; padding: 0;">
+            <li>✔️ Participar en jornadas de limpieza</li>
+            <li>✔️ Apoyar proyectos de reforestación</li>
+            <li>✔️ Educar a otros sobre la importancia del río</li>
+            <li>✔️ Reportar actividades que dañen el ecosistema</li>
+        </ul>
+        <a href="/formulario" class="btn">Registrarse como Voluntario</a>
+    </section>
+
+    
+    <footer id="contacto">
+        <p>Contacto: info@salvemoscanotigre.org</p>
+        <p>Dirección: Calle Principal #123, Villavicencio</p>
+        <p>Teléfono: (123) 456-7890</p>
+        <div class="social">
+            <a href="#" class="fab fa-facebook"></a>
+            <a href="#" class="fab fa-twitter"></a>
+            <a href="#" class="fab fa-instagram"></a>
+        </div>
+        <p>&copy; 2024 Salween Ecológico. Todos los derechos reservados.</p>
+    </footer>
+</body>
+<script src="/js/rio negro.js"></script>
+</html>

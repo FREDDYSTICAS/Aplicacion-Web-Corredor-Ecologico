@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Impacto Ambiental - Río Ocoa</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        /* Estilos generales */
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+        }
+
+        /* Navegación */
+        nav {
+            background-color: #27ae60;
+            padding: 1rem;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        /* Secciones principales */
+        .impacto {
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('/api/placeholder/1200/400');
+            color: white;
+            padding: 4rem 2rem;
+            text-align: center;
+        }
+
+        .detalles {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            padding: 2rem;
+            background-color: #f7fafc;
+        }
+
+        .detalle-item {
+            padding: 1.5rem;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        /* Estadísticas */
+        .estadisticas {
+            background-color:#27ae60;
+            color: white;
+            padding: 3rem 2rem;
+            text-align: center;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .stat-item {
+            border: 2px solid rgba(255,255,255,0.3);
+            padding: 1.5rem;
+            border-radius: 8px;
+        }
+
+        /* Línea de tiempo */
+        .timeline {
+            max-width: 800px;
+            margin: 3rem auto;
+            padding: 2rem;
+        }
+
+        .timeline-item {
+            border-left: 3px solid #27ae60;
+            padding: 1rem;
+            margin: 1rem 0;
+            position: relative;
+        }
+
+        .timeline-item::before {
+            content: '';
+            width: 12px;
+            height: 12px;
+            background: #27ae60;
+            position: absolute;
+            left: -7px;
+            border-radius: 50%;
+        }
+
+        /* Galería */
+        .galeria {
+            padding: 2rem;
+        }
+
+        .imagenes {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+
+        .imagenes img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+
+        /* Llamado a la acción */
+        .llamado-accion {
+            text-align: center;
+            padding: 4rem 2rem;
+            background-color: #ebf8ff;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 1rem 2rem;
+            background-color:#27ae60 ;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            margin-top: 1rem;
+        }
+
+        /* Mapa interactivo */
+        .mapa-section {
+            padding: 2rem;
+            background-color: #f7fafc;
+        }
+
+        .mapa-container {
+            height: 400px;
+            background-color: #e2e8f0;
+            margin-top: 1rem;
+            border-radius: 8px;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #2d3748;
+            color: white;
+            padding: 2rem;
+            text-align: center;
+        }
+
+        .social {
+            margin-top: 1rem;
+        }
+
+        .social a {
+            color: white;
+            margin: 0 1rem;
+            font-size: 1.5rem;
+        }
+
+        /* Nuevas secciones */
+        .especies-amenazadas {
+            padding: 2rem;
+        }
+
+        .especies-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .especie-card {
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .especie-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .especie-info {
+            padding: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <!-- Barra de navegación -->
+    <nav>
+        <ul>
+            <li><a href="/Salween Ecologico/Pagina de Inicio/Inicio.html">Inicio</a></li>
+            <li><a href="/impacto-ambiental">Impacto Ambiental</a></li>
+            <li><a href="/Salween Ecologico/Registro Usuario/Usuario.html">Registro</a></li>
+            <li><a href="/contacto">Contacto</a></li>
+        </ul>
+    </nav>
+
+    <!-- Sección principal de impacto ambiental -->
+    <section class="impacto">
+        <div class="impacto-contenido">
+            <h1>Impacto Ambiental en el Río Ococa</h1>
+            <p>El río Ococa, una arteria vital de Villavicencio, enfrenta desafíos críticos que amenazan su ecosistema y la vida que sustenta. Descubre cómo este importante recurso hídrico está siendo afectado y qué podemos hacer para protegerlo.</p>
+        </div>
+    </section>
+
+    <!-- Nueva sección de estadísticas -->
+    <section class="estadisticas">
+        <h2>Cifras Alarmantes</h2>
+        <div class="stats-grid">
+            <div class="stat-item">
+                <h3>45%</h3>
+                <p>Reducción en la población de peces en los últimos 5 años</p>
+            </div>
+            <div class="stat-item">
+                <h3>2,500 kg</h3>
+                <p>Residuos plásticos recolectados en el último año</p>
+            </div>
+            <div class="stat-item">
+                <h3>30%</h3>
+                <p>Disminución del caudal en la última década</p>
+            </div>
+            <div class="stat-item">
+                <h3>15</h3>
+                <p>Especies en peligro de extinción</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de datos e información sobre el impacto -->
+    <section class="detalles">
+        <div class="detalle-item">
+            <h2>Contaminación del Agua</h2>
+            <p>Los niveles de contaminación han alcanzado puntos críticos debido a:</p>
+            <ul>
+                <li>Vertido de residuos industriales</li>
+                <li>Desechos urbanos sin tratamiento</li>
+                <li>Agricultura intensiva en las riberas</li>
+                <li>Minería ilegal en zonas aledañas</li>
+            </ul>
+        </div>
+        <div class="detalle-item">
+            <h2>Pérdida de Biodiversidad</h2>
+            <p>El ecosistema está en riesgo debido a:</p>
+            <ul>
+                <li>Deforestación masiva</li>
+                <li>Introducción de especies invasoras</li>
+                <li>Alteración de los ciclos naturales</li>
+                <li>Fragmentación del hábitat</li>
+            </ul>
+        </div>
+        <div class="detalle-item">
+            <h2>Soluciones en Marcha</h2>
+            <p>Iniciativas actuales incluyen:</p>
+            <ul>
+                <li>Programa de reforestación ribereña</li>
+                <li>Monitoreo de calidad del agua</li>
+                <li>Educación ambiental comunitaria</li>
+                <li>Regulación de actividades industriales</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Nueva sección de especies amenazadas -->
+    <section class="especies-amenazadas">
+        <h2>Especies Amenazadas</h2>
+        <div class="especies-grid">
+            <div class="especie-card">
+                <img src="/api/placeholder/400/300" alt="Bagre rayado">
+                <div class="especie-info">
+                    <h3>Bagre Rayado</h3>
+                    <p>Especie endémica en peligro crítico debido a la sobrepesca y contaminación.</p>
+                </div>
+            </div>
+            <div class="especie-card">
+                <img src="/api/placeholder/400/300" alt="Nutria de río">
+                <div class="especie-info">
+                    <h3>Nutria de Río</h3>
+                    <p>Población reducida por pérdida de hábitat y disminución de presas.</p>
+                </div>
+            </div>
+            <div class="especie-card">
+                <img src="/api/placeholder/400/300" alt="Tortuga charapa">
+                <div class="especie-info">
+                    <h3>Tortuga Charapa</h3>
+                    <p>Amenazada por la recolección ilegal de huevos y destrucción de sitios de anidación.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Nueva sección de línea de tiempo -->
+    <section class="timeline">
+        <h2>Historia del Deterioro</h2>
+        <div class="timeline-item">
+            <h3>1990</h3>
+            <p>Inicio de la expansión urbana acelerada en las riberas del río.</p>
+        </div>
+        <div class="timeline-item">
+            <h3>2000</h3>
+            <p>Primera evidencia significativa de contaminación industrial.</p>
+        </div>
+        <div class="timeline-item">
+            <h3>2010</h3>
+            <p>Registro de disminución crítica en poblaciones de peces nativos.</p>
+        </div>
+        <div class="timeline-item">
+            <h3>2020</h3>
+            <p>Implementación del primer plan integral de recuperación.</p>
+        </div>
+    </section>
+
+    
+
+    <!-- Galería de imágenes mejorada -->
+    <section class="galeria">
+        <h2>Galería del Río Ococa</h2>
+        <div class="imagenes">
+            <img src="rio1.jpg" alt="Río Ococa">
+            <img src="rio2.jpg" alt="Contaminación en el Río Ococa">
+            <img src="rio3.jpg" alt="Proyecto de conservación en el río">
+        </div>
+    </section>
+
+    <!-- Llamado a la acción mejorado -->
+    <section class="llamado-accion">
+        <h3>¡Sé parte del cambio!</h3>
+        <p>Tu participación es crucial para la recuperación del Río Ococa. Únete a nuestras iniciativas de conservación y ayuda a preservar este valioso ecosistema para las futuras generaciones.</p>
+        <a href="/registro" class="btn">Regístrate Ahora</a>
+        <p>O contáctanos para más información sobre cómo puedes ayudar</p>
+        <a href="/contacto" class="btn">Contactar</a>
+    </section>
+
+    <!-- Pie de página mejorado -->
+    
+    <footer>
+        <p>Contacto: info@salvemoscanotigre.org</p>
+        <p>Dirección: Calle Principal #123, Villavicencio</p>
+        <p>Teléfono: (123) 456-7890</p>
+        <div class="social">
+            <a href="#" class="fab fa-facebook"></a>
+            <a href="#" class="fab fa-twitter"></a>
+            <a href="#" class="fab fa-instagram"></a>
+        </div>
+        <p>&copy; 2024 Salween Ecológico. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>

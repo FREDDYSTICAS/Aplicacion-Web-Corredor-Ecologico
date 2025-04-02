@@ -1,0 +1,135 @@
+/* Estilos Generales */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Barra de navegación */
+header {
+    background-color: #27ae60; 
+    padding: 10px 0;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+header nav ul li a:hover {
+    color: #f39c12; /* Color de hover */
+}
+
+/* Sección de impacto */
+.impacto {
+    background: url('/Salween Ecologico/Rios Impacto ambiental/ococa/img/fondo.png') no-repeat center center;
+    background-size: cover;
+    padding: 50px 20px;
+    color: white;
+    text-align: center;
+}
+
+.impacto h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+/* Detalles sobre el impacto ambiental */
+.detalles {
+    display: flex;
+    justify-content: space-around;
+    padding: 50px 20px;
+    background-color: #fff;
+}
+
+.detalle-item {
+    width: 30%;
+    text-align: center;
+}
+
+.detalle-item h2 {
+    font-size: 1.5em;
+    color: #005c3e;
+}
+
+.detalle-item p {
+    font-size: 1.1em;
+}
+
+/* Galería de imágenes */
+.galeria {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #f0f0f0;
+    color:#005c3e ;
+}
+
+.galeria h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.galeria .imagenes {
+    display: flex;
+    justify-content: space-around;
+    gap: 10px;
+}
+
+.galeria img {
+    width: 30%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Llamado a la acción */
+.llamado-accion {
+    background-color: #27ae60;
+    color: white;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.llamado-accion .btn {
+    background-color: #f39c12;
+    color: white;
+    padding: 10px 20px;
+    font-size: 1.2em;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+.llamado-accion .btn:hover {
+    background-color: #e67e22;
+}
+
+/* Pie de página */
+footer {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+footer .social a {
+    color: white;
+    font-size: 20px;
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+footer .social a:hover {
+    color: #f39c12;
+}

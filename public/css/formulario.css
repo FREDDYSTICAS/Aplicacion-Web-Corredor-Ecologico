@@ -1,0 +1,167 @@
+:root {
+    --color-primary: #2ecc71;
+    --color-secondary: #27ae60;
+    --color-background: #e8f5e9;
+    --color-text: #2c3e50;
+    --color-accent: #3498db;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--color-background);
+    color: var(--color-text);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 20px;
+}
+
+h1 {
+    font-size: 2.5em;
+    color: var(--color-primary);
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+form {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 40px;
+}
+
+h2 {
+    font-size: 1.8em;
+    color: var(--color-secondary);
+    margin-bottom: 20px;
+    border-bottom: 3px solid var(--color-accent);
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 1.1em;
+    color: var(--color-text);
+    font-weight: bold; /* Se añadió para darle más énfasis */
+}
+
+input[type="email"], /* Específico para el campo de correo electrónico */
+input[type="text"],
+input[type="number"],
+input[type="url"],
+input[type="date"],
+textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-size: 1em;
+    color: #333;
+    background-color: #f9f9f9;
+    transition: border-color 0.3s ease;
+}
+
+input[type="email"]:focus, /* Estilo para el input de correo electrónico cuando tiene foco */
+input[type="text"]:focus,
+input[type="number"]:focus,
+input[type="url"]:focus,
+input[type="date"]:focus,
+textarea:focus {
+    border-color: var(--color-primary);
+    outline: none;
+}
+
+textarea {
+    resize: vertical;
+    height: 150px;
+}
+
+button {
+    background-color: var(--color-primary);
+    color: white;
+    padding: 15px 30px;
+    font-size: 1.2em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 100%;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: var(--color-secondary);
+}
+
+form input[type="url"] {
+    background-color: #f2f2f2;
+}
+
+form input[type="url"]:hover {
+    background-color: #e5e5e5;
+}
+
+form button {
+    background-color: var(--color-accent);
+    border-radius: 50px;
+    padding: 15px 25px;
+}
+
+form button:hover {
+    background-color: var(--color-primary);
+}
+
+/* Ajustes para pantallas pequeñas */
+@media (max-width: 768px) {
+    .container {
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 2em;
+    }
+
+    form {
+        padding: 20px;
+    }
+
+    h2 {
+        font-size: 1.6em;
+    }
+
+    button {
+        font-size: 1em;
+    }
+}
+.back-arrow {
+    display: inline-flex; 
+    align-items: center; 
+    justify-content: center; 
+    text-decoration: none; 
+    color:#fff; /* Color del icono (oscuro para contraste) */
+    font-size: 20px; /* Tamaño del icono */
+    width: 50px; 
+    height: 50px;
+    border-radius: 50%; /* Hace un botón redondo */
+    background-color: #27ae60; /* Fondo claro */
+    border: 2px solid #3498DB; /* Borde azul */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para destacar */
+    transition: all 0.3s ease; 
+    margin: 5px;
+}
+
+/* Estilos cuando se pasa el cursor sobre la flecha */
+.back-arrow:hover {
+    background-color: #3498DB; /* Cambia el fondo a azul oscuro al pasar el cursor */
+    color: #fff; /* Cambia el color del icono a blanco */
+    transform: scale(1.1); /* Agranda ligeramente */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Sombra más destacada */
+}

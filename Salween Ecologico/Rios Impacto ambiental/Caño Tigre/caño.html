@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Impacto Ambiental - Caño Tigre</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        header {
+            background-color: #27ae60;
+            padding: 15px 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        header nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin: 0;
+            padding: 0;
+        }
+
+        header nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        header nav ul li a:hover {
+            color: #f39c12;
+        }
+
+        .impacto {
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('/api/placeholder/1200/600');
+            background-size: cover;
+            padding: 100px 20px;
+            color: white;
+            text-align: center;
+        }
+
+        .impacto h1 {
+            font-size: 3em;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .detalles {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            padding: 50px 20px;
+            background-color: #fff;
+        }
+
+        .detalle-item {
+            padding: 20px;
+            text-align: center;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .detalle-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .detalle-item h2 {
+            color: #005c3e;
+            margin-bottom: 15px;
+        }
+
+        .estadisticas {
+            background-color: #f8f9fa;
+            padding: 50px 20px;
+        }
+
+        .estadisticas-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .estadistica-item {
+            text-align: center;
+            padding: 20px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .estadistica-numero {
+            font-size: 2.5em;
+            color: #27ae60;
+            font-weight: bold;
+        }
+
+        .timeline {
+            max-width: 1000px;
+            margin: 50px auto;
+            padding: 20px;
+        }
+
+        .timeline-item {
+            border-left: 3px solid #27ae60;
+            padding: 20px;
+            margin: 20px 0;
+            position: relative;
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -10px;
+            top: 50%;
+            width: 15px;
+            height: 15px;
+            background: #27ae60;
+            border-radius: 50%;
+        }
+
+        .galeria {
+            text-align: center;
+            padding: 50px 20px;
+            background-color: #f0f0f0;
+        }
+
+        .galeria-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .galeria-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            background-color: white;
+        }
+
+        .galeria-item img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .galeria-item:hover img {
+            transform: scale(1.1);
+        }
+
+        .galeria-descripcion {
+            padding: 10px;
+            margin: 0;
+            background-color: white;
+            color: #333;
+            font-size: 0.9em;
+            text-align: center;
+        }
+
+        .llamado-accion {
+            background-color: #27ae60;
+            color: white;
+            padding: 80px 20px;
+            text-align: center;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: #f39c12;
+            color: white;
+            padding: 15px 30px;
+            font-size: 1.2em;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 20px;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: #e67e22;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        .social {
+            margin-top: 20px;
+        }
+
+        .social a {
+            color: white;
+            font-size: 24px;
+            margin: 0 15px;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .social a:hover {
+            color: #f39c12;
+        }
+
+        @media (max-width: 768px) {
+            .detalles {
+                grid-template-columns: 1fr;
+            }
+
+            .galeria-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .impacto h1 {
+                font-size: 2em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="/">Inicio</a></li>
+                <li><a href="/impacto-ambiental">Impacto Ambiental</a></li>
+                <li><a href="/registro">Registro</a></li>
+                <li><a href="/contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="impacto">
+        <div class="impacto-contenido">
+            <h1>Impacto Ambiental en Caño Tigre</h1>
+            <p>Caño Tigre, ubicado en el corazón de Villavicencio, representa uno de los ecosistemas más importantes de la región. Este cuerpo de agua es hogar de diversas especies y juega un papel crucial en el equilibrio ecológico local.</p>
+        </div>
+    </section>
+
+    <section class="detalles">
+        <div class="detalle-item">
+            <h2>Contaminación del Agua</h2>
+            <p>La calidad del agua se ha visto severamente afectada por:</p>
+            <ul>
+                <li>Vertimientos industriales no controlados</li>
+                <li>Residuos domésticos</li>
+                <li>Agricultura intensiva en las riberas</li>
+                <li>Desechos plásticos</li>
+            </ul>
+        </div>
+        <div class="detalle-item">
+            <h2>Destrucción de Hábitats</h2>
+            <p>Los principales factores que amenazan la biodiversidad incluyen:</p>
+            <ul>
+                <li>Deforestación de la ribera</li>
+                <li>Expansión urbana no planificada</li>
+                <li>Minería ilegal</li>
+                <li>Modificación del cauce natural</li>
+            </ul>
+        </div>
+        <div class="detalle-item">
+            <h2>Especies Afectadas</h2>
+            <p>La degradación ambiental ha impactado principalmente a:</p>
+            <ul>
+                <li>Peces nativos</li>
+                <li>Anfibios endémicos</li>
+                <li>Aves migratorias</li>
+                <li>Flora ribereña</li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="estadisticas">
+        <h2 style="text-align: center; color: #005c3e; margin-bottom: 40px;">Impacto en Números</h2>
+        <div class="estadisticas-grid">
+            <div class="estadistica-item">
+                <div class="estadistica-numero">70%</div>
+                <p>Reducción de la biodiversidad en los últimos 10 años</p>
+            </div>
+            <div class="estadistica-item">
+                <div class="estadistica-numero">5000</div>
+                <p>Kg de residuos recolectados en limpiezas comunitarias</p>
+            </div>
+            <div class="estadistica-item">
+                <div class="estadistica-numero">30%</div>
+                <p>Del cauce natural alterado por intervención humana</p>
+            </div>
+            <div class="estadistica-item">
+                <div class="estadistica-numero">15</div>
+                <p>Especies en peligro crítico de extinción</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="timeline">
+        <h2 style="text-align: center; color: #005c3e; margin-bottom: 40px;">Historia del Deterioro Ambiental</h2>
+        <div class="timeline-item">
+            <h3>1980s</h3>
+            <p>Inicio de la expansión urbana no planificada en las zonas aledañas al caño.</p>
+        </div>
+        <div class="timeline-item">
+            <h3>1990s</h3>
+            <p>Primeros registros de contaminación significativa por vertimientos industriales.</p>
+        </div>
+        <div class="timeline-item">
+            <h3>2000s</h3>
+            <p>Intensificación de la deforestación y modificación del cauce natural.</p>
+        </div>
+        <div class="timeline-item">
+            <h3>2010s</h3>
+            <p>Inicio de los primeros proyectos de restauración y conservación comunitaria.</p>
+        </div>
+        <div class="timeline-item">
+            <h3>Actualidad</h3>
+            <p>Implementación de programas de recuperación y monitoreo ambiental.</p>
+        </div>
+    </section>
+
+    <section class="galeria">
+        <h2>Galería de Caño Tigre</h2>
+        <div class="galeria-grid">
+            <div class="galeria-item">
+                <img src="/api/placeholder/400/300" alt="Vista de Caño Tigre en Villavicencio">
+                <p class="galeria-descripcion">Caño Tigre, un importante cuerpo de agua en Villavicencio</p>
+            </div>
+            <div class="galeria-item">
+                <img src="/api/placeholder/400/300" alt="Evidencia de contaminación en Caño Tigre">
+                <p class="galeria-descripcion">Situación actual de contaminación que afecta al ecosistema</p>
+            </div>
+            <div class="galeria-item">
+                <img src="/api/placeholder/400/300" alt="Proyecto de conservación en Caño Tigre">
+                <p class="galeria-descripcion">Iniciativas de conservación y recuperación del caño</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="llamado-accion">
+        <h3>¡Únete a la Restauración de Caño Tigre!</h3>
+        <p>Tu participación es fundamental para la recuperación de este importante ecosistema. Juntos podemos hacer la diferencia.</p>
+        <p>Participa en nuestras jornadas de limpieza, programas de educación ambiental y proyectos de reforestación.</p>
+        <a href="/registro" class="btn">Registrarse como Voluntario</a>
+    </section>
+
+    <footer>
+        <p>Contacto: info@salvemoscanotigre.org</p>
+        <p>Dirección: Calle Principal #123, Villavicencio</p>
+        <p>Teléfono: (123) 456-7890</p>
+        <div class="social">
+            <a href="#" class="fab fa-facebook"></a>
+            <a href="#" class="fab fa-twitter"></a>
+            <a href="#" class="fab fa-instagram"></a>
+        </div>
+        <p>&copy; 2024 Salween Ecológico. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>

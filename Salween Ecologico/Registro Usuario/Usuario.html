@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro - Salween Ecológico</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="/Salween Ecologico/Registro Usuario/Usuario.css" rel="stylesheet">
+</head>
+<body>
+    <a href="/Salween Ecologico/Pagina de Inicio/Inicio.html" class="back-arrow">
+        <i class="fas fa-arrow-left"></i>
+    </a>
+    <div class="registro-container">
+        <div class="registro-info">
+            <h2>Únete al Corredor Ecológico Salween</h2>
+            <p>Tu registro es un paso hacia la conservación de nuestros ecosistemas</p>
+            
+            <div class="project-details">
+                <h3>Impacto de tu Participación</h3>
+                <p>Al registrarte, te conviertes en un agente de cambio para la protección de ríos como el Ococa, Caño Tigre y Río Negro.</p>
+                
+                <h4>Nuestra Misión</h4>
+                <p>
+                    <i class="fas fa-leaf"></i> 
+                    Recuperar y preservar los ecosistemas acuáticos del Meta
+                </p>
+            </div>
+        </div>
+        
+        <div class="registro-form">
+            <h2>Registro de Voluntario</h2>
+            
+            <form id="registroForm" action="/validarRegistro" method="post">
+                <div class="input-group">
+                    <i class="fas fa-user"></i>
+                    <input type="text" id="nombre" placeholder="Nombre completo" required>
+                </div>
+
+                <div class="input-group">
+                    <i class="fas fa-envelope"></i>
+                    <input type="email" id="email" placeholder="Correo electrónico" required>
+                </div>
+                
+                <div class="input-group">
+                    <i class="fas fa-lock"></i>
+                    <input type="password" id="contrasena" placeholder="Contraseña" required>
+                </div>
+
+                <div class="input-group">
+                    <i class="fas fa-lock"></i>
+                    <input type="password" id="confirmar-contrasena" placeholder="Confirmar contraseña" required>
+                </div>
+                
+                <button type="submit" class="btn">Registrarme</button>
+                
+                <div id="motivacion-mensaje"></div>
+                
+                <div class="text-center mt-3">
+                    ¿Ya tienes cuenta? 
+                    <a href="#" style="color: var(--color-primary); font-weight: bold;">
+                        Iniciar Sesión
+                    </a>
+                </div>
+            </form>
+        </div>
+    </div>
+<script src="/Salween Ecologico/Usuario.js"></script>
+</body>
+</html>

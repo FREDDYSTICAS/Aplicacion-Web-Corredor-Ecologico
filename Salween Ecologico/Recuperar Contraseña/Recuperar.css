@@ -1,0 +1,132 @@
+/* Estilos generales */
+:root {
+    --color-primary: #2ecc71;
+    --color-secondary: #27ae60;
+    --color-background: #e8f5e9;
+    --color-text: #2c3e50;
+    --color-accent: #3498db;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background-color: var(--color-background);
+    color: var(--color-text);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    line-height: 1.6;
+}
+
+/* Contenedor principal */
+.recovery-container {
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    padding: 40px;
+    width: 100%;
+    max-width: 500px;
+    text-align: center;
+}
+
+.recovery-container h2 {
+    color: var(--color-primary);
+    margin-bottom: 20px;
+}
+
+.motivational-message {
+    background-color: var(--color-background);
+    border-radius: 10px;
+    padding: 15px;
+    margin-bottom: 20px;
+    font-style: italic;
+    color: var(--color-secondary);
+}
+
+.input-group {
+    margin-bottom: 15px;
+    position: relative;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+.input-group input:focus {
+    border-color: var(--color-accent);
+}
+
+.btn {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    background-color: var(--color-accent);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-bottom: 15px;
+}
+
+.btn:hover {
+    background-color: var(--color-primary);
+}
+
+#recoveryImage {
+    max-width: 200px;
+    margin: 20px auto;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.steps {
+    text-align: left;
+    background-color: #f9f9f9;
+    padding: 15px;
+    border-radius: 8px;
+    margin-top: 20px;
+}
+
+/* Responsividad para tablets y pantallas pequeñas (ancho máximo 1024px) */
+@media (max-width: 1024px) {
+    .recovery-container {
+        padding: 30px;
+        max-width: 80%;
+    }
+
+    #recoveryImage {
+        max-width: 150px;
+    }
+}
+
+/* Responsividad para teléfonos móviles (ancho máximo 768px) */
+@media (max-width: 768px) {
+    .recovery-container {
+        padding: 20px;
+        max-width: 90%;
+    }
+
+    .motivational-message {
+        font-size: 0.9em;
+    }
+
+    .btn {
+        padding: 10px;
+    }
+
+    #recoveryImage {
+        max-width: 120px;
+    }
+}

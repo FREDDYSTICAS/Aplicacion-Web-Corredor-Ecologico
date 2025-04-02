@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <title>Perfil de Usuario</title>
+    <style>
+        :root {
+            --color-primary: #2ecc71;
+            --color-secondary: #27ae60;
+            --color-background: #e8f5e9;
+            --color-text: #2c3e50;
+            --color-accent: #3498db;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--color-background);
+            color: var(--color-text);
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+
+        .profile-card {
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: transform 0.3s ease;
+        }
+
+        .profile-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .profile-header {
+            background: var(--color-primary);
+            padding: 2rem;
+            text-align: center;
+            color: white;
+            position: relative;
+        }
+
+        .profile-avatar-container {
+            position: relative;
+            width: 150px;
+            height: 150px;
+            margin: 0 auto 1rem;
+        }
+
+        .profile-avatar {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            border: 5px solid white;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+            object-fit: cover;
+        }
+
+        .profile-avatar:hover {
+            transform: scale(1.1);
+        }
+
+        .avatar-upload {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            opacity: 0;
+            cursor: pointer;
+        }
+
+        .camera-icon {
+            position: absolute;
+            bottom: 5px;
+            right: 5px;
+            background: var(--color-accent);
+            border-radius: 50%;
+            padding: 8px;
+            color: white;
+            font-size: 20px;
+        }
+
+        .profile-name {
+            font-size: 1.8rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .profile-title {
+            color: #e8f5e9;
+            font-size: 1.1rem;
+            margin-bottom: 1rem;
+        }
+
+        .profile-info {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1rem;
+            padding: 1.5rem;
+            text-align: center;
+            background: var(--color-secondary);
+            color: white;
+        }
+
+        .info-item {
+            cursor: pointer;
+            transition: transform 0.3s ease;
+            padding: 1rem;
+            border-radius: 10px;
+        }
+
+        .info-item:hover {
+            transform: translateY(-5px);
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        .info-label {
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+        }
+
+        .profile-content {
+            padding: 2rem;
+        }
+
+        .content-section {
+            margin-bottom: 2rem;
+        }
+
+        .section-title {
+            color: var(--color-primary);
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .edit-btn {
+            background: var(--color-accent);
+            color: white;
+            border: none;
+            padding: 0.8rem 1.5rem;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 0.9rem;
+        }
+
+        .edit-btn:hover {
+            background: #2980b9;
+            transform: translateY(-2px);
+        }
+        .back-arrow {
+    display: inline-flex; 
+    align-items: center; 
+    justify-content: center; 
+    text-decoration: none; 
+    color:#fff; /* Color del icono (oscuro para contraste) */
+    font-size: 20px; /* Tamaño del icono */
+    width: 50px; 
+    height: 50px;
+    border-radius: 50%; /* Hace un botón redondo */
+    background-color: #27ae60; /* Fondo claro */
+    border: 2px solid #3498DB; /* Borde azul */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para destacar */
+    transition: all 0.3s ease; 
+    margin: 5px;
+}
+
+/* Estilos cuando se pasa el cursor sobre la flecha */
+.back-arrow:hover {
+    background-color: #3498DB; /* Cambia el fondo a azul oscuro al pasar el cursor */
+    color: #fff; /* Cambia el color del icono a blanco */
+    transform: scale(1.1); /* Agranda ligeramente */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Sombra más destacada */
+}
+
+        @media (max-width: 600px) {
+            .profile-info {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<nav>
+    <!-- estructura de la flecha de inicio-->
+    <a href="/inicio.html" class="back-arrow">
+        <i class="fas fa-arrow-left"></i>
+    </a>
+</nav>
+<body>
+    <div class="container">
+        <div class="profile-card">
+            <div class="profile-header">
+                <div class="profile-avatar-container">
+                    <img src="/api/placeholder/150/150" alt="Foto de perfil" class="profile-avatar" id="profileImage">
+                    <input type="file" class="avatar-upload" id="avatarUpload" accept="image/*">
+                    <div class="camera-icon">📷</div>
+                </div>
+                <h1 class="profile-name">freddy stiven castro pardo</h1>
+            </div>
+
+            <div class="profile-info">
+                <div class="info-item">
+                    <div class="info-label">Email</div>
+                    <div>juan.perez@email.com</div>
+                </div>
+                <div class="info-item">
+                    <div class="info-label">Teléfono</div>
+                    <div>+51 987 654 321</div>
+                </div>
+                <div class="info-item">
+                    <div class="info-label">Edad</div>
+                    <div>28 años</div>
+                </div>
+            </div>
+
+            <div class="profile-content">
+                <div class="content-section">
+                    <div class="section-title">
+                        <span>Sobre mí</span>
+                        <button class="edit-btn" onclick="editBio()">Editar</button>
+                    </div>
+                    <p id="bioText">Me gusta explorar nuevas tecnologías y aprender constantemente. Disfruto de la música, los videojuegos y pasar tiempo al aire libre.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let isEditing = false;
+
+        // Manejo de subida de imagen
+        document.getElementById('avatarUpload').addEventListener('change', function(e) {
+            const file = e.target.files[0];
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = function(event) {
+                    document.getElementById('profileImage').src = event.target.result;
+                };
+                reader.readAsDataURL(file);
+            }
+        });
+
+        document.getElementById('profileImage').addEventListener('click', function() {
+            document.getElementById('avatarUpload').click();
+        });
+
+        function editBio() {
+            const bioText = document.getElementById('bioText');
+            const editBtn = document.querySelector('.edit-btn');
+
+            if (!isEditing) {
+                const currentText = bioText.textContent;
+                bioText.innerHTML = `<textarea style="width: 100%; min-height: 100px; padding: 0.5rem; border: 2px solid var(--color-primary); border-radius: 5px;">${currentText}</textarea>`;
+                editBtn.textContent = 'Guardar';
+                isEditing = true;
+            } else {
+                const newText = bioText.querySelector('textarea').value;
+                bioText.innerHTML = newText;
+                editBtn.textContent = 'Editar';
+                isEditing = false;
+
+                // Animación de guardado
+                editBtn.style.backgroundColor = 'var(--color-primary)';
+                setTimeout(() => {
+                    editBtn.style.backgroundColor = 'var(--color-accent)';
+                }, 1000);
+            }
+        }
+
+        // Animaciones para los items de información
+        document.querySelectorAll('.info-item').forEach(item => {
+            item.addEventListener('mouseover', function() {
+                this.style.transform = 'translateY(-5px)';
+            });
+
+            item.addEventListener('mouseout', function() {
+                this.style.transform = 'translateY(0)';
+            });
+        });
+    </script>
+</body>
+</html>

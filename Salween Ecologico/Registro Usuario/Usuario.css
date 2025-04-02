@@ -1,0 +1,200 @@
+:root {
+    --color-primary: #2ecc71;
+    --color-secondary: #27ae60;
+    --color-background: #e8f5e9;
+    --color-text: #2c3e50;
+    --color-accent: #3498db;
+    --color-facebook-blue: #3b5998;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background-color: var(--color-background);
+    color: var(--color-text);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    line-height: 1.6;
+}
+/*este body son los css para el background img */
+body {
+    background-image: url('/Salween Ecologico/Pagina de Inicio/img/1.jpg'); /* Asegúrate de colocar la ruta correcta a la imagen */
+    background-size: cover; /* Esto hace que la imagen cubra toda el área de la pantalla */
+    background-position: center center; /* Centra la imagen */
+    background-attachment: fixed; /* Hace que la imagen se quede fija mientras se desplaza el contenido */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+}
+/* css para la flecha de regreso*/
+.back-arrow {
+    position: fixed;
+    top: 10px; /* Asegúrate de que esté en la parte superior */
+    left: 10px; /* Asegúrate de que esté en la parte izquierda */
+    font-size: 24px; /* Tamaño de la flecha */
+    color:#27ae60; /* Color de la flecha */
+    text-decoration: none; /* Elimina el subrayado del enlace */
+    background-color: none; /* Fondo semitransparente */
+    border-radius: 50%; /* Hace que el fondo sea redondeado */
+    padding: 10px; /* Espaciado alrededor de la flecha */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+}
+
+.back-arrow:hover {
+    background-color: rgba(255, 255, 255, 1); /* Fondo blanco cuando se pasa el ratón */
+    color: #007BFF; /* Cambia el color de la flecha al pasar el ratón */
+    transition: background-color 0.3s, color 0.3s; /* Transición suave */
+}
+
+
+.registro-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    max-width: 1100px;
+    width: 90%;
+}
+
+.registro-info {
+    background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
+    color: white;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+.registro-form {
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.registro-form h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: var(--color-text);
+}
+
+.input-group {
+    margin-bottom: 15px;
+    position: relative;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+.input-group input:focus {
+    border-color: var(--color-accent);
+}
+
+.input-group i {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #aaa;
+}
+
+.input-group input[type="text"],
+.input-group input[type="email"],
+.input-group input[type="password"] {
+    padding-left: 40px;
+}
+
+.btn {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    background-color: var(--color-accent);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-bottom: 15px;
+}
+
+.btn:hover {
+    background-color: var(--color-primary);
+}
+
+#motivacion-mensaje {
+    background-color: #e8f5e9;
+    color: var(--color-secondary);
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+    margin-top: 15px;
+    display: none;
+}
+
+/* Media Queries para Responsividad */
+
+/* Para pantallas de computadoras (PC) */
+@media (min-width: 1024px) {
+    .registro-container {
+        grid-template-columns: 1fr 1fr; /* Dos columnas en pantallas grandes */
+    }
+
+    .registro-info, .registro-form {
+        padding: 40px; /* Padding adecuado para pantallas grandes */
+    }
+}
+
+/* Para pantallas de tabletas */
+@media (max-width: 768px) {
+    .registro-container {
+        grid-template-columns: 1fr; /* Una sola columna en tabletas */
+    }
+
+    .registro-info, .registro-form {
+        padding: 30px; /* Menos padding para tabletas */
+    }
+
+    .btn {
+        padding: 10px; /* Ajustar el tamaño del botón */
+    }
+}
+
+/* Para pantallas de teléfonos móviles */
+@media (max-width: 480px) {
+    body {
+        flex-direction: column; /* Cambiar a columna en dispositivos móviles */
+        justify-content: flex-start; /* Alinear elementos al principio */
+        padding: 10px; /* Padding alrededor del cuerpo */
+    }
+
+    .registro-container {
+        width: 100%; /* Contenedor ocupa todo el ancho en móviles */
+        padding: 10px; /* Padding menor en móviles */
+    }
+
+    .registro-info {
+        padding: 20px; /* Ajustar padding en móviles */
+    }
+
+    .btn {
+        padding: 8px; /* Ajustar tamaño del botón */
+    }
+
+    #motivacion-mensaje {
+        margin-top: 10px; /* Ajustar margenes */
+    }
+}

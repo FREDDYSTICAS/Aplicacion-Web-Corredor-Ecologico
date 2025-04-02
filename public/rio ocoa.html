@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Impacto Ambiental - Río Ococa</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="css/rio ocoa.css" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+    <nav>
+        <!-- estructura de la flecha de inicio-->
+        <a href="/inicio.html" class="back-arrow">
+            <i class="fas fa-arrow-left"></i>
+        </a>
+        <ul>
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#registro">Registro</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+        </ul>
+    </nav>
+</header>
+    <!-- menu desplegable-->
+    <button class="sidebar-toggle" onclick="toggleSidebar()">
+        <i class="fas fa-user"></i>
+    </button>
+
+    <!-- Profile Sidebar -->
+    <div class="profile-sidebar" id="profileSidebar">
+        <button class="profile-sidebar-close" onclick="toggleSidebar()">
+        </button>
+        <h3>Área Personal</h3>
+        <a href="/login" class="btn">Iniciar Sesión</a>
+        <a href="/formulario" class="btn">Registrarse Voluntario</a>
+        <a href="#" class="btn">Mi Perfil</a>
+        <hr>
+        <h4>Accesos Rápidos</h4>
+        <ul>
+            <li><a href="/rio negro.html">Pagina rìo negro</a></li>
+            <li><a href="/caño tigre.html">pagina caño tigre</a></li>
+            <li><a href="/inicio.html#output1">Inteligencia artificial</a></li>
+            
+            
+        </ul>
+    </div>
+    
+    <section class="impacto" id="inicio" style="background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('img/Rio Ocoa.jpg'); background-size: cover; background-position: center;">
+        <div class="impacto-contenido">
+            <h1>Impacto Ambiental en el Río Ocoa</h1>
+            <p>El río Ococa, una arteria vital de Villavicencio, enfrenta desafíos críticos que amenazan su ecosistema y la vida que sustenta. Descubre cómo este importante recurso hídrico está siendo afectado y qué podemos hacer para protegerlo.</p>
+        </div>
+    </section>
+
+    <section class="estadisticas">
+        <h2 style="text-align: center; color: #005c3e; margin-bottom: 40px;">Cifras Alarmantes</h2>
+        <div class="stats-grid">
+            <div class="stat-item">
+                <div class="estadistica-numero">45%</div>
+                <p>Reducción en la población de peces en los últimos 5 años</p>
+            </div>
+            <div class="stat-item">
+                <div class="estadistica-numero">2.500 kg</div>
+                <p>Residuos plásticos recolectados en el último año</p>
+            </div>
+            <div class="stat-item">
+                <div class="estadistica-numero">30%</div>
+                <p>Disminución del caudal en la última década</p>
+            </div>
+            <div class="stat-item">
+                <div class="estadistica-numero">15%</div>
+                <p>Especies en peligro de extinción</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de datos e información sobre el impacto -->
+    <section class="detalles">
+        <div class="detalle-item">
+            <h2>Contaminación del Agua</h2>
+            <p>Los niveles de contaminación han alcanzado puntos críticos debido a:</p>
+            <ul>
+                <li>Vertido de residuos industriales</li>
+                <li>Desechos urbanos sin tratamiento</li>
+                <li>Agricultura intensiva en las riberas</li>
+                <li>Minería ilegal en zonas aledañas</li>
+            </ul>
+        </div>
+        <div class="detalle-item">
+            <h2>Pérdida de Biodiversidad</h2>
+            <p>El ecosistema está en riesgo debido a:</p>
+            <ul>
+                <li>Deforestación masiva</li>
+                <li>Introducción de especies invasoras</li>
+                <li>Alteración de los ciclos naturales</li>
+                <li>Fragmentación del hábitat</li>
+            </ul>
+        </div>
+        <div class="detalle-item">
+            <h2>Soluciones en Marcha</h2>
+            <p>Iniciativas actuales incluyen:</p>
+            <ul>
+                <li>Programa de reforestación ribereña</li>
+                <li>Monitoreo de calidad del agua</li>
+                <li>Educación ambiental comunitaria</li>
+                <li>Regulación de actividades industriales</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Nueva sección de especies amenazadas -->
+    <section class="especies-amenazadas">
+        <h2>Especies Amenazadas</h2>
+        <div class="especies-grid">
+            <div class="especie-card">
+                <img src="img/32ifoto.jpg" alt="Bagre rayado">
+                <div class="especie-info">
+                    <h3>Bagre Rayado</h3>
+                    <p>Especie endémica en peligro crítico debido a la sobrepesca y contaminación.</p>
+                </div>
+            </div>
+            <div class="especie-card">
+                <img src="img/animal_nutria_de_rio_image-2.jpg" alt="Nutria de río">
+                <div class="especie-info">
+                    <h3>Nutria de Río</h3>
+                    <p>Población reducida por pérdida de hábitat y disminución de presas.</p>
+                </div>
+            </div>
+            <div class="especie-card">
+                <img src="img/tortuga-charapa.jpg" alt="Tortuga charapa">
+                <div class="especie-info">
+                    <h3>Tortuga Charapa</h3>
+                    <p>Amenazada por la recolección ilegal de huevos y destrucción de sitios de anidación.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Nueva sección de línea de tiempo -->
+    <section class="timeline">
+        <h2>Historia del Deterioro</h2>
+        <div class="timeline-item">
+            <h3>1990</h3>
+            <p>Inicio de la expansión urbana acelerada en las riberas del río.</p>
+        </div>
+        <div class="timeline-item">
+            <h3>2000</h3>
+            <p>Primera evidencia significativa de contaminación industrial.</p>
+        </div>
+        <div class="timeline-item">
+            <h3>2010</h3>
+            <p>Registro de disminución crítica en poblaciones de peces nativos.</p>
+        </div>
+        <div class="timeline-item">
+            <h3>2020</h3>
+            <p>Implementación del primer plan integral de recuperación.</p>
+        </div>
+    </section>
+
+    <!-- Galería de imágenes mejorada -->
+    <section class="galeria">
+        <h2>Galería de Río Ocoa</h2>
+        <div class="galeria-descripcion">
+            <p>Explora la belleza natural y los desafíos ambientales que enfrenta nuestro querido caño tigre a través de esta galería fotográfica. Cada imagen cuenta una historia sobre la importancia de preservar este vital ecosistema.</p>
+        </div>
+        
+        <div class="imagenes">
+            <div class="imagen-card">
+                <img src="img/1.jpeg" alt="Río Ocoa " />
+                <div class="imagen-info">
+                    <h3>Río Ocoa </h3>
+                    <p>rio ocoa, un importante cuerpo de agua en Villavicencio.</p>
+                </div>
+            </div>
+            <div class="imagen-card">
+                <img src="img/2.jpeg" alt="Contaminación en el Río Ocoa" />
+                <div class="imagen-info">
+                    <h3>Contaminación en el Río Ocoa</h3>
+                    <p>Situación actual de contaminación que afecta al ecosistema.</p>
+                </div>    
+            </div>
+            <div class="imagen-card">
+                <img src="img/4.jpeg" alt="Conservación en el Rio Ocoa" />
+                <div class="imagen-info">
+                    <h3>Conservación en el Rio Ocoa</h3>
+                    <p>Iniciativas de conservación y recuperación del rio Ocoa.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Llamado a la acción mejorado -->
+    <section class="llamado-accion" id="registro">
+        <h3>¡Únete a la Restauración de Rio Ocoa!</h3>
+        <p>Tu participación es crucial para la recuperación del Río Ocoa. Únete a nuestras iniciativas de conservación y ayuda a preservar este valioso ecosistema para las futuras generaciones.</p>
+        <a href="/formulario" class="btn">Registrarse como Voluntario</a>
+    </section>
+    
+    
+    <footer id="contacto">
+        <p>Contacto: info@salvemoscanotigre.org</p>
+        <p>Dirección: Calle Principal #123, Villavicencio</p>
+        <p>Teléfono: (123) 456-7890</p>
+        <div class="social">
+            <a href="#" class="fab fa-facebook"></a>
+            <a href="#" class="fab fa-twitter"></a>
+            <a href="#" class="fab fa-instagram"></a>
+        </div>
+        <p>&copy; 2024 Salween Ecológico. Todos los derechos reservados.</p>
+    </footer>
+    <script src="js/rio ocoa.js"></script>
+</body>
+</html>
